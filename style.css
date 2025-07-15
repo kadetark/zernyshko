@@ -142,10 +142,9 @@ body {
   position: absolute;
   height: 500px;
   top: 217px;
-  right: -75px;
+  right: -74px;
 }
-.top__img-cin:hover {
-  cursor: pointer;
+.top__img-сin:hover {
   animation: spin 3.5s linear infinite;
 }
 

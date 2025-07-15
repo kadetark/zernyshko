@@ -155,11 +155,10 @@ body {
         position: absolute;
         height: 500px;
         top: 217px;
-        right: -75px;
+        right: -74px;
     }
 
-    &__img-cin:hover {
-        cursor: pointer;
+    &__img-сin:hover {
         animation: spin 3.5s linear infinite;
     }
 }

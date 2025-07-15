@@ -7,6 +7,10 @@ a {
     text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat Alternates", sans-serif;
 }
@@ -17,12 +21,14 @@ body {
 }
 
 .header {
+    position: fixed;
     background: rgb(255, 255, 255);
     height: 120px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: relative;
+    align-items: center;    
+    width: 1200px;
+    z-index: 1000;
 }
 
 .menu {
@@ -69,7 +75,7 @@ body {
 }
 
 .top {
-    height: 770px;
+    height: 890px;
     background: rgb(246, 245, 244);
     display: flex;
     justify-content: space-between;
@@ -126,13 +132,13 @@ body {
         height: 770px;
         position: absolute;
         right: -433px;
-        top: 0px;
+        top: 120px;
     }
 
     &__img-coffee {
         position: absolute;
         height: 450px;
-        top: 22px;
+        top: 142px;
     }
 
     &__img-coffee:hover {
@@ -142,8 +148,8 @@ body {
 
     &__img-cookie {
         position: absolute;
-        height: 350px;
-        top: 361px;
+        height: 330px;
+        top: 481px;
     }
 
     &__img-cookie:hover {
@@ -154,7 +160,7 @@ body {
     &__img-сin {        
         position: absolute;
         height: 500px;
-        top: 217px;
+        top: 357px;
         right: -74px;
     }
 
@@ -170,7 +176,7 @@ body {
     font-weight: 700;
     line-height: 59px;
     margin-bottom: 24px;
-    padding-top: 119px;
+    padding-top: 240px;
 
     &-small {
         width: 490px;
@@ -180,8 +186,139 @@ body {
         line-height: 29px;
         margin-bottom: 24px;
     }
+
+    &-another{
+        margin-bottom: 48px;
+        padding-top: 64px; 
+
+        &_link{
+            padding: 0;
+        }
+    }
 }
 
+.about-us{
+    height: 851px;
+    background: rgb(246, 245, 244);
+
+    &__content{
+        width: 584px;
+        height: 292px;
+        border-radius: 24px 24px 24px 0px;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+        background: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;  
+        
+        &-left, &-right{
+            width: 292px;
+            height: 292px;
+        }
+        
+        &-right{
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+    }
+
+    &--content-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 32px;
+    }
+
+    &__img{
+        width: 292px;
+        height: 292px;
+        border-radius: 24px 0px 0px 0px;
+    }
+
+    &__tittle{
+        @extend .title-small;
+        margin-bottom: 14px;        
+    }
+
+    &__text-block{
+        @extend .top__text-block;  
+        width: 252px;      
+    }
+
+    &__text{
+        color: rgb(69, 64, 61);        
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+}
+
+.block-menu{
+    height: 1087px;
+    background: rgb(246, 245, 244);
+
+    &--top{
+        display: flex;        
+        justify-content: space-between;
+        height: 59px;
+        padding-top: 64px;  
+    }
+
+    &__link{
+        display: flex;
+        gap: 7px;
+        height: 59px;   
+        align-items: center;           
+    }
+
+    &__button{
+        width: 120px;
+        height: 45px;
+        box-sizing: border-box;
+        border: 1px solid rgb(162, 101, 57);
+        border-radius: 24px;
+        color: rgb(162, 101, 57);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        letter-spacing: 0px;
+        text-align: left;
+        font-family: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__button:hover{
+        background: rgb(162, 101, 57);
+        color: rgb(255, 255, 255);
+        transition: ease 0.3s;
+    }
+
+    &__content-box{
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 32px;
+    }
+
+    &__content{
+        width: 276px;
+        height: 410px;
+        border-radius: 24px;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+        background: rgb(255, 255, 255);
+    }
+}
+
+.reviews{
+    height: 683px;
+    background: rgb(246, 245, 244);
+}
 
 
 @keyframes spin {

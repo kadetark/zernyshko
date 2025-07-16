@@ -298,6 +298,13 @@ body {
         transition: ease 0.3s;
     }
 
+    &__button.active {
+        background: rgb(162, 101, 57);
+        color: #fff;
+    }
+
+    
+
     &__content-box{
         margin-top: 48px;
         display: grid;
@@ -311,8 +318,58 @@ body {
         height: 410px;
         border-radius: 24px;
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
-        background: rgb(255, 255, 255);
+        background: rgb(255, 255, 255); 
     }
+
+    &__up{
+        height: 276px;
+        background-color: #DEDEDE;
+        border-radius: 24px 24px 0 0;
+    }
+
+    &__img{
+        height: 276px;
+        border-radius: 24px;          
+    }
+
+    &__down{
+        height: 134px;
+        display: flex;
+        gap: 7px;
+        margin: 20px;
+        flex-direction: column; 
+    }
+
+    &__price{
+        color: rgb(69, 64, 61);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    &__desk{
+        color: rgb(69, 64, 61);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    &__volume{
+        color: rgb(154, 154, 154);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+}
+
+#desserts{
+    display: none;
 }
 
 .reviews{

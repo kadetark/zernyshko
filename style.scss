@@ -9,6 +9,7 @@ a {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -146,25 +147,25 @@ body {
         animation: spin 3.5s linear infinite;
     }    
 
-    &__img-cookie {
+    &__img-snacks {
         position: absolute;
         height: 330px;
         top: 481px;
     }
 
-    &__img-cookie:hover {
+    &__img-snacks:hover {
         cursor: pointer;
         animation: spin 3.5s linear infinite;
     }
 
-    &__img-сin {        
+    &__img-desserts {        
         position: absolute;
         height: 500px;
         top: 357px;
         right: -74px;
     }
 
-    &__img-сin:hover {
+    &__img-desserts:hover {
         animation: spin 3.5s linear infinite;
     }
 }
@@ -303,28 +304,31 @@ body {
         color: #fff;
     }
 
-    
+    &__content-bigbox{
+        position: relative;
+        height: 900px;  
+    }
 
     &__content-box{
         margin-top: 48px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 1fr;
-        gap: 32px;
+        gap: 32px;        
     }
 
     &__content{
         width: 276px;
         height: 410px;
-        border-radius: 24px;
+        background: rgb(255, 255, 255);         
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
-        background: rgb(255, 255, 255); 
+        border-radius: 24px;        
     }
 
     &__up{
-        height: 276px;
-        background-color: #DEDEDE;
+        height: 276px;        
         border-radius: 24px 24px 0 0;
+        background-color: #DEDEDE;
     }
 
     &__img{
@@ -368,8 +372,24 @@ body {
     }
 }
 
-#desserts{
-    display: none;
+/* Общие стили для всех секций */
+#coffee,
+#desserts,
+#snacks {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    opacity: 0;
+    visibility: hidden;    
+    transition: 1s ease;
+}
+
+/* Активное состояние (видимый блок) */
+#coffee.active,
+#desserts.active,
+#snacks.active {
+    opacity: 1;
+    visibility: visible;    
 }
 
 .reviews{

@@ -1,24 +1,44 @@
-let buttonCoffee = document.getElementsByClassName("block-menu__button")[0];
+// Получаем элементы
+const buttons = document.querySelectorAll('.block-menu__button');
+const sections = {
+    coffee: document.getElementById('coffee'),
+    desserts: document.getElementById('desserts'),
+    snacks: document.getElementById('snacks')
+};
 
-let buttonDesserts = document.getElementsByClassName("block-menu__button")[1];
+// Функция переключения активных состояний с анимацией
+function setActive(buttonType) {
+    // Скрываем все секции
+    Object.values(sections).forEach(section => {
+        section.classList.remove('active');
+    });
 
-// buttonCoffee.style.background = "rgb(162, 101, 57)";
-// buttonCoffee.style.color = "rgb(255, 255, 255)"; 
+    // Удаляем класс active у всех кнопок
+    buttons.forEach(btn => btn.classList.remove('active'));
 
-function coffee() {
-    document.getElementById("coffee").style.display = "grid";
-    document.getElementById("desserts").style.display = "none";
-
-    // Активируем кнопку "Кофе"
-    buttonCoffee.classList.add('active');
-    buttonDesserts.classList.remove('active');
+    // Активируем нужную секцию и кнопку
+    sections[buttonType].classList.add('active');
+    document.querySelector(`.block-menu__button[data-type="${buttonType}"]`).classList.add('active');
 }
 
-function desserts() {
-    document.getElementById("desserts").style.display = "grid";
-    document.getElementById("coffee").style.display = "none";
+// Инициализация: активируем "Кофе" по умолчанию
+setActive('coffee');
 
-    // Активируем кнопку "Десерты"
-    buttonDesserts.classList.add('active');
-    buttonCoffee.classList.remove('active');
+// Добавляем обработчики событий на кнопки
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const type = btn.getAttribute('data-type');
+        setActive(type);
+    });
+});
+
+document.querySelector('.top__img-coffee').addEventListener('click', () => setActive('coffee'));
+document.querySelector('.top__img-desserts').addEventListener('click', () => setActive('desserts'));
+document.querySelector('.top__img-snacks').addEventListener('click', () => setActive('snacks'));
+
+function scrollToMenu() {
+    document.getElementById('menu').scrollIntoView({ 
+        behavior: 'smooth' // Плавная прокрутка
+    });
 }
+

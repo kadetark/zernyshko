@@ -36,13 +36,15 @@
                 <p class="top__text">Мы предлагаем свежие зерна, уникальные авторские рецепты и заботу о природе. Наши
                     бариста рады подарить вам вкус и уют, из-за которых захочется возвращаться снова и снова.</p>
             </div>
-            <button class="top__button">Посмотреть меню</button>
+            <button class="top__button" onclick="scrollToMenu()">Посмотреть меню</button>
         </div>
         <div class="top-right">
             <img class="top__img-main" src="img/доска.png" alt="Доска с зернами">
-            <img class="top__img-coffee" src="img/Кофе.png" alt="Кофе">
-            <img class="top__img-сin" src="img/син.png" alt="Синабон">
-            <img class="top__img-cookie" src="img/Печенье.png" alt="Печенье">
+            <a class="top__link" href="#menu">
+                <img class="top__img-coffee" src="img/Кофе.png" alt="Кофе">
+                <img class="top__img-desserts" src="img/син.png" alt="Синабон">
+                <img class="top__img-snacks" src="img/Печенье.png" alt="Печенье">
+            </a>            
         </div>
     </div>
     <div class="about-us center" id="about-us">
@@ -110,180 +112,265 @@
         <div class="block-menu--top">
             <h2 class="title title-another title-another_link">Меню</h2>
             <div class="block-menu__link">
-                <button class="block-menu__button" onclick="coffee()">Кофе</button>
-                <button class="block-menu__button" onclick="desserts()">Десерты</button>
-                <button class="block-menu__button">Закуски</button>
+                <button class="block-menu__button" data-type="coffee">Кофе</button>
+                <button class="block-menu__button" data-type="desserts">Десерты</button>
+                <button class="block-menu__button" data-type="snacks">Закуски</button>
             </div>
         </div>
-        <div class="block-menu__content-box" id="coffee">
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/капучино-миндаль.png" alt="капучино-миндаль">
+        <div class="block-menu__content-bigbox">
+            <div class="block-menu__content-box" id="coffee">
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/капучино-миндаль.png" alt="капучино-миндаль">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">240₽</p>
+                        <p class="block-menu__desk">Капучино на миндальном молоке с кокосовым сиропом</p>
+                        <p class="block-menu__volume">350 мл</p>
+                    </div>
                 </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">240₽</p>
-                    <p class="block-menu__desk">Капучино на миндальном молоке с кокосовым сиропом</p>
-                    <p class="block-menu__volume">350 мл</p>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/латте-кокос.png" alt="латте-кокос">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">270₽</p>
+                        <p class="block-menu__desk">Латте на кокосовом молоке с кленовым сиропом </p>
+                        <p class="block-menu__volume">350 мл</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/раф.png" alt="раф">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">360₽</p>
+                        <p class="block-menu__desk">Раф с карамельным сиропом и шоколадом</p>
+                        <p class="block-menu__volume">250 мл</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/американо.png" alt="американо">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">160₽</p>
+                        <p class="block-menu__desk">Классический американо с зарядом бодрости</p>
+                        <p class="block-menu__volume">300 мл</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/флет.png" alt="флет уайт">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">160₽</p>
+                        <p class="block-menu__desk">Флет уайт с насыщенным вкусом эфиопского эспрессо</p>
+                        <p class="block-menu__volume">300 мл</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/латте-овсянка.png" alt="латте-овсянка">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">270₽</p>
+                        <p class="block-menu__desk">Латте на овсяном молоке с добавлением корицы</p>
+                        <p class="block-menu__volume">300 мл</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/эспрессо.png" alt="эспрессо">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">180₽</p>
+                        <p class="block-menu__desk">Двойной эспрессо с высоким зарядом энергии</p>
+                        <p class="block-menu__volume">300 мл</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/капучино-соя.png" alt="капучино-соя">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">240₽</p>
+                        <p class="block-menu__desk">Капучино на соевом молоке с ореховым сиропом</p>
+                        <p class="block-menu__volume">300 мл</p>
+                    </div>
                 </div>
             </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/латте-кокос.png" alt="латте-кокос">
+            <div class="block-menu__content-box" id="desserts">
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/синабон.png" alt="синабон">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">240₽</p>
+                        <p class="block-menu__desk">Синабон с ароматной корицей и глазурью</p>
+                        <p class="block-menu__volume">250 гр</p>
+                    </div>
                 </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">270₽</p>
-                    <p class="block-menu__desk">Латте на кокосовом молоке с кленовым сиропом </p>
-                    <p class="block-menu__volume">350 мл</p>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/слойка.png" alt="слойка">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">270₽</p>
+                        <p class="block-menu__desk">Воздушная датская слойка с нежным кремом</p>
+                        <p class="block-menu__volume">250 гр</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/крем-бр.png" alt="крем-брюле">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">360₽</p>
+                        <p class="block-menu__desk">Нежный крем-брюле с ягодами и карамельной корочкой </p>
+                        <p class="block-menu__volume">150 гр</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/улитка.png" alt="улитка">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">270₽</p>
+                        <p class="block-menu__desk">Улитка с яблочно-лимонным джемом и изюмом</p>
+                        <p class="block-menu__volume">250 гр</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/шоко-торт.png" alt="шоколадный торт">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">160₽</p>
+                        <p class="block-menu__desk">Шоколадно-кофейный торт с глубоким вкусом какао</p>
+                        <p class="block-menu__volume">170 гр</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/тарталетка.png" alt="тарталетка">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">180₽</p>
+                        <p class="block-menu__desk">Шоколадная тарталетка с кремом и  малиной</p>
+                        <p class="block-menu__volume">150 гр</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/медовик.png" alt="медовик">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">240₽</p>
+                        <p class="block-menu__desk">Классический медовик со сливочным кремом</p>
+                        <p class="block-menu__volume">250 гр</p>
+                    </div>
+                </div>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/торт с корицей.png" alt="торт с корицей">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">160₽</p>
+                        <p class="block-menu__desk">Торт с нежным кремом, корицей и шоколадом</p>
+                        <p class="block-menu__volume">300 гр</p>
+                    </div>
                 </div>
             </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/раф.png" alt="раф">
+            <div class="block-menu__content-box" id="snacks">
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/миндаль.png" alt="миндаль">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">240₽</p>
+                        <p class="block-menu__desk">Миндаль — идеальная закуска для перекуса</p>
+                        <p class="block-menu__volume">200 гр</p>
+                    </div>
                 </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">360₽</p>
-                    <p class="block-menu__desk">Раф с карамельным сиропом и шоколадом</p>
-                    <p class="block-menu__volume">250 мл</p>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/класика печенье.png" alt="класическое печенье">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">360₽</p>
+                        <p class="block-menu__desk">Классическое печенье с кусочками шоколада</p>
+                        <p class="block-menu__volume">250 гр</p>
+                    </div>
                 </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/американо.png" alt="американо">
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/баранки.png" alt="баранки">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">270₽</p>
+                        <p class="block-menu__desk">Баранки с легкой солью — отличное дополнение к кофе</p>
+                        <p class="block-menu__volume">350 гр</p>
+                    </div>
                 </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">160₽</p>
-                    <p class="block-menu__desk">Классический американо с зарядом бодрости</p>
-                    <p class="block-menu__volume">300 мл</p>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/булочка мак.png" alt="булочка с маком">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">160₽</p>
+                        <p class="block-menu__desk">Булочка с маком, покрытая нежной сахарной глазурью</p>
+                        <p class="block-menu__volume">150 гр</p>
+                    </div>
                 </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/флет.png" alt="флет уайт">
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/кешью.png" alt="кешью">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">270₽</p>
+                        <p class="block-menu__desk">Свежий, хрустящий кешью — полезный перекус</p>
+                        <p class="block-menu__volume">300 гр</p>
+                    </div>
                 </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">160₽</p>
-                    <p class="block-menu__desk">Флет уайт с насыщенным вкусом эфиопского эспрессо</p>
-                    <p class="block-menu__volume">300 мл</p>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/мягкое печенье.png" alt="мягкое печенье">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">160₽</p>
+                        <p class="block-menu__desk">Мягкое печенье с начинкой из шоколада </p>
+                        <p class="block-menu__volume">150 гр</p>
+                    </div>
                 </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/латте-овсянка.png" alt="латте-овсянка">
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/панкейки.png" alt="панкейки">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">180₽</p>
+                        <p class="block-menu__desk">Нежные панкейки с сладким медом и маслом </p>
+                        <p class="block-menu__volume">300 гр</p>
+                    </div>
                 </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">270₽</p>
-                    <p class="block-menu__desk">Латте на овсяном молоке с добавлением корицы</p>
-                    <p class="block-menu__volume">300 мл</p>
-                </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/эспрессо.png" alt="эспрессо">
-                </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">180₽</p>
-                    <p class="block-menu__desk">Двойной эспрессо с высоким зарядом энергии</p>
-                    <p class="block-menu__volume">300 мл</p>
-                </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/капучино-соя.png" alt="капучино-соя">
-                </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">240₽</p>
-                    <p class="block-menu__desk">Капучино на соевом молоке с ореховым сиропом</p>
-                    <p class="block-menu__volume">300 мл</p>
+                <div class="block-menu__content">
+                    <div class="block-menu__up">
+                        <img class="block-menu__img" src="img/самса.png" alt="самса">
+                    </div>
+                    <div class="block-menu__down">
+                        <p class="block-menu__price">240₽</p>
+                        <p class="block-menu__desk">Сытные треугольники с сырной начинкой/p>
+                        <p class="block-menu__volume">250 гр</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="block-menu__content-box" id="desserts">
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="" alt="">
-                </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">240₽</p>
-                    <p class="block-menu__desk">Капучино на миндальном молоке с кокосовым сиропом</p>
-                    <p class="block-menu__volume">350 мл</p>
-                </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/латте-кокос.png" alt="латте-кокос">
-                </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">270₽</p>
-                    <p class="block-menu__desk">Латте на кокосовом молоке с кленовым сиропом </p>
-                    <p class="block-menu__volume">350 мл</p>
-                </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/раф.png" alt="раф">
-                </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">360₽</p>
-                    <p class="block-menu__desk">Раф с карамельным сиропом и шоколадом</p>
-                    <p class="block-menu__volume">250 мл</p>
-                </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/американо.png" alt="американо">
-                </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">160₽</p>
-                    <p class="block-menu__desk">Классический американо с зарядом бодрости</p>
-                    <p class="block-menu__volume">300 мл</p>
-                </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/флет.png" alt="флет уайт">
-                </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">160₽</p>
-                    <p class="block-menu__desk">Флет уайт с насыщенным вкусом эфиопского эспрессо</p>
-                    <p class="block-menu__volume">300 мл</p>
-                </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/латте-овсянка.png" alt="латте-овсянка">
-                </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">270₽</p>
-                    <p class="block-menu__desk">Латте на овсяном молоке с добавлением корицы</p>
-                    <p class="block-menu__volume">300 мл</p>
-                </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/эспрессо.png" alt="эспрессо">
-                </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">180₽</p>
-                    <p class="block-menu__desk">Двойной эспрессо с высоким зарядом энергии</p>
-                    <p class="block-menu__volume">300 мл</p>
-                </div>
-            </div>
-            <div class="block-menu__content">
-                <div class="block-menu__up">
-                    <img class="block-menu__img" src="img/капучино-соя.png" alt="капучино-соя">
-                </div>
-                <div class="block-menu__down">
-                    <p class="block-menu__price">240₽</p>
-                    <p class="block-menu__desk">Капучино на соевом молоке с ореховым сиропом</p>
-                    <p class="block-menu__volume">300 мл</p>
-                </div>
-            </div>
-        </div>
-
-
     </div>
     <div class="reviews center">
         <h2 class="title title-another" id="reviews">Отзывы</h2>
+        <div class="reviews__content-box">
+            <div class="reviews__content"></div>
+        </div>
 
     </div>
     <script src="script.js"></script>

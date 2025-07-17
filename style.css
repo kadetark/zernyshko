@@ -10,6 +10,7 @@ a {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -135,22 +136,22 @@ body {
   cursor: pointer;
   animation: spin 3.5s linear infinite;
 }
-.top__img-cookie {
+.top__img-snacks {
   position: absolute;
   height: 330px;
   top: 481px;
 }
-.top__img-cookie:hover {
+.top__img-snacks:hover {
   cursor: pointer;
   animation: spin 3.5s linear infinite;
 }
-.top__img-сin {
+.top__img-desserts {
   position: absolute;
   height: 500px;
   top: 357px;
   right: -74px;
 }
-.top__img-сin:hover {
+.top__img-desserts:hover {
   animation: spin 3.5s linear infinite;
 }
 
@@ -270,6 +271,10 @@ body {
   background: rgb(162, 101, 57);
   color: #fff;
 }
+.block-menu__content-bigbox {
+  position: relative;
+  height: 900px;
+}
 .block-menu__content-box {
   margin-top: 48px;
   display: grid;
@@ -280,14 +285,14 @@ body {
 .block-menu__content {
   width: 276px;
   height: 410px;
-  border-radius: 24px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
   background: rgb(255, 255, 255);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+  border-radius: 24px;
 }
 .block-menu__up {
   height: 276px;
-  background-color: #DEDEDE;
   border-radius: 24px 24px 0 0;
+  background-color: #DEDEDE;
 }
 .block-menu__img {
   height: 276px;
@@ -325,8 +330,24 @@ body {
   text-align: left;
 }
 
-#desserts {
-  display: none;
+/* Общие стили для всех секций */
+#coffee,
+#desserts,
+#snacks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s ease;
+}
+
+/* Активное состояние (видимый блок) */
+#coffee.active,
+#desserts.active,
+#snacks.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .reviews {

@@ -10,6 +10,7 @@ a {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -135,22 +136,22 @@ body {
   cursor: pointer;
   animation: spin 3.5s linear infinite;
 }
-.top__img-cookie {
+.top__img-snacks {
   position: absolute;
   height: 330px;
   top: 481px;
 }
-.top__img-cookie:hover {
+.top__img-snacks:hover {
   cursor: pointer;
   animation: spin 3.5s linear infinite;
 }
-.top__img-сin {
+.top__img-desserts {
   position: absolute;
   height: 500px;
   top: 357px;
   right: -74px;
 }
-.top__img-сin:hover {
+.top__img-desserts:hover {
   animation: spin 3.5s linear infinite;
 }
 
@@ -266,6 +267,14 @@ body {
   color: rgb(255, 255, 255);
   transition: ease 0.3s;
 }
+.block-menu__button.active {
+  background: rgb(162, 101, 57);
+  color: #fff;
+}
+.block-menu__content-bigbox {
+  position: relative;
+  height: 900px;
+}
 .block-menu__content-box {
   margin-top: 48px;
   display: grid;
@@ -276,9 +285,69 @@ body {
 .block-menu__content {
   width: 276px;
   height: 410px;
-  border-radius: 24px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
   background: rgb(255, 255, 255);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+  border-radius: 24px;
+}
+.block-menu__up {
+  height: 276px;
+  border-radius: 24px 24px 0 0;
+  background-color: #DEDEDE;
+}
+.block-menu__img {
+  height: 276px;
+  border-radius: 24px;
+}
+.block-menu__down {
+  height: 134px;
+  display: flex;
+  gap: 7px;
+  margin: 20px;
+  flex-direction: column;
+}
+.block-menu__price {
+  color: rgb(69, 64, 61);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.block-menu__desk {
+  color: rgb(69, 64, 61);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.block-menu__volume {
+  color: rgb(154, 154, 154);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+/* Общие стили для всех секций */
+#coffee,
+#desserts,
+#snacks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s ease;
+}
+
+/* Активное состояние (видимый блок) */
+#coffee.active,
+#desserts.active,
+#snacks.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .reviews {

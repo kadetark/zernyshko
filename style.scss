@@ -395,6 +395,67 @@ body {
 .reviews{
     height: 683px;
     background: rgb(246, 245, 244);
+
+    &__content-box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);        
+        gap: 32px;        
+    }
+
+    &__content{
+        width: 379px;
+        height: 208px;
+        border-radius: 24px;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+        background: rgb(255, 255, 255);
+        
+        &-container{
+            margin: 20px;
+        }
+    }
+
+    &__content-up{
+        width: 83px;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 15px;
+    }
+
+    &__foto{        
+        border-radius: 60px;
+        width: 63px;       
+    }
+
+    &__client{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        width: 135px;
+    }
+
+    &__client-name{
+        color: rgb(69, 64, 61);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    &__text{
+        color: rgb(69, 64, 61);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0px;
+        text-align: left;
+        width: 334px;
+    }
+}
+
+.contacts{    
+    height: 749px;
+    background: rgb(246, 245, 244);
 }
 
 

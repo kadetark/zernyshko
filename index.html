@@ -22,8 +22,8 @@
             <a class="menu__link" href="#about-us">О нас</a>
             <a class="menu__link" href="#menu">Меню</a>
             <a class="menu__link" href="#reviews">Отзывы</a>
-            <a class="menu__link" href="">Контакты</a>
-            <button class="menu__button">Связаться</button>
+            <a class="menu__link" href="#contacts">Контакты</a>
+            <button class="menu__button" onclick="scrollToBooking()">Связаться</button>
         </nav>
     </header>
     <div class="top center">
@@ -459,7 +459,7 @@
         <h2 class="title title-another" id="reviews">Как нас найти</h2>
         <div class="contacts__box">
             <div class="contacts__tel-box">
-                <h3 class="contacts__title">Контакты</h3>
+                <h3 class="contacts__title" id="contacts">Контакты</h3>
                 <div class="contacts__tel">                    
                     <div class="contacts__tel-flex">
                         <svg class="contacts__svg" width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -473,7 +473,7 @@
 </svg>
 
 
-                        <p class="contacts__tel-style">+7 (999) 999 99-99</p>
+                        <a class="contacts__tel-style" href="tel:+7(999)9999999">+7 (999) 999 99-99</a>
                     </div>
                     <div class="contacts__tel-flex">
                         <svg class="contacts__svg" width="16.666687" height="14.166748" viewBox="0 0 16.6667 14.1667" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -484,7 +484,7 @@
 	<path id="Vector" d="M12.5 0L4.16 0C1.66 0 0 1.25 0 4.16L0 10C0 12.91 1.66 14.16 4.16 14.16L12.5 14.16C15 14.16 16.66 12.91 16.66 10L16.66 4.16C16.66 1.25 15 0 12.5 0ZM12.89 5.07L10.28 7.15C9.73 7.6 9.03 7.81 8.33 7.81C7.63 7.81 6.92 7.6 6.38 7.15L3.77 5.07C3.5 4.85 3.46 4.45 3.67 4.19C3.89 3.92 4.28 3.87 4.54 4.09L7.15 6.17C7.79 6.68 8.86 6.68 9.5 6.17L12.1 4.09C12.37 3.87 12.77 3.91 12.98 4.19C13.2 4.45 13.15 4.85 12.89 5.07Z" fill="currentColor" fill-opacity="1.000000" fill-rule="nonzero"/>
 </svg>
 
-                        <p class="contacts__tel-style">zernyshko@mail.ru</p>
+                        <a class="contacts__tel-style" href="mailto:zernyshko@mail.ru">zernyshko@mail.ru</a>
                     </div>
                     <div class="contacts__tel-flex">
                         <svg class="contacts__svg" width="14.791626" height="17.083252" viewBox="0 0 14.7916 17.0833" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -498,6 +498,15 @@
                         <p class="contacts__tel-style">СПб, Коржекова, 5</p>
                     </div>  
                 </div>
+            </div>
+            <div class="contacts__booking">
+                <h3 class="contacts__title" id="booking">Бронирование</h3>
+                <form class="contacts__form" action="#">                    
+                    <input class="contacts__input" type="text" name="name_user" id="name_user" placeholder="Ваше имя">
+                    <input class="contacts__input" type="tel" name="phone" id="phone" placeholder="Ваш номер телефона">
+                    <input class="contacts__input" type="text" name="comment" id="comment" placeholder="Комментарий">                    
+                    <button class="contacts__button" type="submit">Забронировать</button>
+                </form>
             </div>
         </div>
     </div>

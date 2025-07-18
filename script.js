@@ -48,3 +48,19 @@ function scrollToBooking() {
     });
 }
 
+document.querySelector('.contacts__form').addEventListener('submit', function(e) {
+  e.preventDefault(); // Предотвращаем стандартную отправку
+  const formData = new FormData(this);
+
+  fetch(this.action, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    alert('Спасибо! Мы свяжемся с вами.');
+    this.reset(); // Очищаем форму
+  })
+  .catch(error => {
+    alert('Ошибка отправки. Попробуйте позже.');
+  });
+});

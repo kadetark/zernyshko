@@ -501,12 +501,13 @@
             </div>
             <div class="contacts__booking">
                 <h3 class="contacts__title" id="booking">Бронирование</h3>
-                <form class="contacts__form" action="#">                    
-                    <input class="contacts__input" type="text" name="name_user" id="name_user" placeholder="Ваше имя">
-                    <input class="contacts__input" type="tel" name="phone" id="phone" placeholder="Ваш номер телефона">
-                    <input class="contacts__input" type="text" name="comment" id="comment" placeholder="Комментарий">                    
+                <form class="contacts__form" action="mail.php" method="POST">                    
+                    <input class="contacts__input" type="text" name="name_user" id="name_user" placeholder="Ваше имя" required>
+                    <input class="contacts__input" type="tel" name="phone" id="phone" placeholder="Ваш номер телефона" required>
+                    <input class="contacts__input" type="text" name="comment" id="comment" placeholder="Комментарий" required>                    
                     <button class="contacts__button" type="submit">Забронировать</button>
                 </form>
+
             </div>
         </div>
     </div>

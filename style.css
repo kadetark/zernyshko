@@ -407,6 +407,51 @@ body {
   height: 749px;
   background: rgb(246, 245, 244);
 }
+.contacts__box {
+  height: 514px;
+}
+.contacts__tel-box {
+  width: 379px;
+  height: 181px;
+  border-radius: 24px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+  background: rgb(255, 255, 255);
+}
+.contacts__title {
+  color: rgb(69, 64, 61);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 22.5px;
+}
+.contacts__tel {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding-left: 20px;
+}
+.contacts__tel-flex {
+  display: flex;
+  gap: 10px;
+}
+.contacts__tel-flex:hover .contacts__svg {
+  color: rgb(162, 101, 57);
+}
+.contacts__tel-style:hover {
+  color: rgb(162, 101, 57);
+}
+.contacts__tel-style {
+  color: rgb(69, 64, 61);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: left;
+}
 
 @keyframes spin {
   from {

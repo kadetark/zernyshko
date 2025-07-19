@@ -197,11 +197,18 @@ body {
   width: 292px;
   height: 292px;
 }
+.about-us__content-left {
+  border-radius: 24px 0 0 0;
+  overflow: hidden;
+}
 .about-us__content-right {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
   padding-left: 20px;
+}
+.about-us__content:hover .about-us__img {
+  transform: scale(1.2);
 }
 .about-us--content-box {
   display: grid;
@@ -213,6 +220,7 @@ body {
   width: 292px;
   height: 292px;
   border-radius: 24px 0px 0px 0px;
+  transition: transform 0.5s ease;
 }
 .about-us__tittle {
   margin-bottom: 14px;
@@ -556,13 +564,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 21px;
+  align-items: flex-end;
+  margin-top: 60px;
 }
 .footer__menu {
-  width: 364px;
   height: 17px;
   display: flex;
   gap: 24px;
-  justify-content: flex-end;
 }
 .footer__menu-link {
   color: rgb(69, 64, 61);
@@ -574,6 +582,10 @@ body {
 }
 .footer__menu-link:hover {
   text-decoration: underline;
+}
+.footer__vector {
+  display: flex;
+  gap: 14.13px;
 }
 
 @keyframes spin {

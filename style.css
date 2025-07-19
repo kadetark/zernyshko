@@ -197,11 +197,18 @@ body {
   width: 292px;
   height: 292px;
 }
+.about-us__content-left {
+  border-radius: 24px 0 0 0;
+  overflow: hidden;
+}
 .about-us__content-right {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
   padding-left: 20px;
+}
+.about-us__content:hover .about-us__img {
+  transform: scale(1.2);
 }
 .about-us--content-box {
   display: grid;
@@ -213,6 +220,7 @@ body {
   width: 292px;
   height: 292px;
   border-radius: 24px 0px 0px 0px;
+  transition: transform 0.5s ease;
 }
 .about-us__tittle {
   margin-bottom: 14px;
@@ -409,6 +417,9 @@ body {
 }
 .contacts__box {
   height: 514px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
 }
 .contacts__tel-box {
   width: 379px;
@@ -509,6 +520,72 @@ body {
   background: rgb(162, 101, 57);
   color: rgb(255, 255, 255);
   transition: ease 0.3s;
+}
+.contacts__map-box {
+  width: 789px;
+  height: 514px;
+  border-radius: 24px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+  background: rgb(222, 222, 222);
+}
+.contacts__map {
+  border-radius: 24px;
+}
+
+.footer {
+  height: 156px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+}
+.footer__box-left {
+  width: 305px;
+  height: 156px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+.footer__logo {
+  height: 24px;
+  width: 209px;
+}
+.footer__logo-text {
+  color: rgb(154, 154, 154);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.footer__box-right {
+  width: 358px;
+  height: 55.09px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  align-items: flex-end;
+  margin-top: 60px;
+}
+.footer__menu {
+  height: 17px;
+  display: flex;
+  gap: 24px;
+}
+.footer__menu-link {
+  color: rgb(69, 64, 61);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.footer__menu-link:hover {
+  text-decoration: underline;
+}
+.footer__vector {
+  display: flex;
+  gap: 14.13px;
 }
 
 @keyframes spin {
